@@ -1,6 +1,6 @@
 <p align="center">
 	<a href="https://github.com/Linusar/aws-postman"  target="_blank">
-	<img  align="center"  alt="pineapple"  src="https://raw.githubusercontent.com/Linusar/aws-postman/public/imag/pineapple2.png"  />
+	<img  align="center"  alt="pineapple"  src="https://raw.githubusercontent.com/Linusar/aws-postman/master/public/img/dotnetses.png"  />
 	</a>
 </p>
 <h1 align="center">Welcome to dotnet api Aws Ses 👋</h1>
