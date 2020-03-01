@@ -14,7 +14,6 @@ namespace aws_postman.Controllers
   [Route("api/v1/[controller]")]
   public class ListdestinationController : ControllerBase
   {
-
     private readonly ApplicationDbContext context;
     private readonly ILogger<ListdestinationController> _logger;
     public ListdestinationController(ApplicationDbContext context, ILogger<ListdestinationController> logger)

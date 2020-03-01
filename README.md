@@ -96,6 +96,10 @@ dotnet run
 dotnet build
 ```
 
+## Swagger Ui
+
+https://IPSERVER:5001/swagger/index.html
+
 ## Run unit tests
 
 ```sh

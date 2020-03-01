@@ -1,1 +1,8 @@
-.bin
+# Don't track content of these folders
+bin/
+
+# Compiled source #
+###################
+*.dll
+*.exe
+*.pdb
