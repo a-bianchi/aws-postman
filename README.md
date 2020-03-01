@@ -9,6 +9,7 @@
 </p>
 
 > Dotnet Core 3 api AWS-POSTMAN
+> It is assumed that the region used is USEast1
 
 ## Packages
 
