@@ -37,7 +37,7 @@ namespace aws_postman.Controllers
       {
         foreach (var dest in message.destination)
         {
-          await ses.Postman(message.source, dest.email, message.subject, message.body);
+          await ses.Postman(message.source, dest.email, ses.CastList(message.ccdestination), ses.CastList(message.bccdestination), message.subject, message.body);
         }
         return Ok(new { status = "Ok" });
       }

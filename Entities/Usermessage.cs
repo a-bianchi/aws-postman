@@ -15,6 +15,10 @@ namespace aws_postman.Entities
     public string source { get; set; }
     [Required]
     public List<Email> destination { get; set; }
+
+    public List<Email> ccdestination { get; set; }
+
+    public List<Email> bccdestination { get; set; }
     [Required]
     public string subject { get; set; }
     [Required]

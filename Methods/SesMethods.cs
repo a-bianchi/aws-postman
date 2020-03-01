@@ -13,7 +13,7 @@ namespace SesMethods
 {
   public class MySesMethods
   {
-    public async Task<Object> Postman(string source, string destination, string subject, string body)
+    public async Task<Object> Postman(string source, string destination, List<string> ccdestination, List<string> bccdestination, string subject, string body)
     {
       Console.WriteLine("Sending Email...");
       using (var client = new AmazonSimpleEmailServiceClient(Amazon.RegionEndpoint.USEast1))
@@ -21,7 +21,7 @@ namespace SesMethods
         var sendRequest = new SendEmailRequest
         {
           Source = source.ToString(),
-          Destination = new Destination { ToAddresses = { destination } },
+          Destination = new Destination { ToAddresses = { destination }, CcAddresses = ccdestination, BccAddresses = bccdestination },
           Message = new Message
           {
             Subject = new Content(subject.ToString()),
@@ -44,8 +44,22 @@ namespace SesMethods
           return new { error = ex.Message };
         }
       }
-
     }
 
+    public List<String> CastList(List<Email> ccdestination)
+    {
+
+      List<string> newList = new List<string>();
+      if (ccdestination != null)
+      {
+        foreach (var dest in ccdestination)
+        {
+          newList.Add(dest.email);
+        }
+
+      }
+
+      return newList;
+    }
   }
 }
